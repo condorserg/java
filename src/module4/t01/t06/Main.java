@@ -28,36 +28,32 @@ public class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
 
-        // массив с правильными ответами
+//        // массив с правильными ответами
         int[] arrCorrectAnswers = new int[]{1, 3, 2};
-
+//
         int[] arrAnswers = new int[3];
+        //массив на 3 строки
+        String[][] questions = new String[3][];
 
-        System.out.println("Вопрос 1:\nВариант1\nВариант2\nВариант3\nВариант4");
-        System.out.println("Введите номер ответа на вопрос 1: ");
-        int answer1 = s.nextInt();
-        if ((answer1 == 1) || (answer1 == 2) || (answer1 == 3) || (answer1 == 4)) {
-            arrAnswers[0] = answer1;
+        questions[0] = new String[]{"Вопрос1:", "Вариант 1", "Вариант 2", "Вариант 3", "Вариант 4"};
+        questions[1] = new String[]{"Вопрос2: ", "Вариант 1", "Вариант 2", "Вариант 3", "Вариант 4"};
+        questions[2] = new String[]{"Вопрос3: ", "Вариант 1", "Вариант 2", "Вариант 3", "Вариант 4"};
+
+        //на экран
+        for (int i = 0; i < questions.length; i++) {
+            for (int j = 0; j < questions[i].length; j++) {
+                System.out.print(" " + questions[i][j] + " ");
+            }
+            System.out.println("\nВведите номер ответа на вопрос: ");
+
+            arrAnswers[i] = s.nextInt();
+
         }
-
-        System.out.println("Вопрос 2:\nВариант1\nВариант2\nВариант3\nВариант4");
-        System.out.println("Введите номер ответа на вопрос 2: ");
-        int answer2 = s.nextInt();
-        if ((answer2 == 1) || (answer2 == 2) || (answer2 == 3) || (answer2 == 4)) {
-            arrAnswers[1] = answer2;
-        }
-
-        System.out.println("Вопрос 3:\nВариант1\nВариант2\nВариант3\nВариант4");
-        System.out.println("Введите номер ответа на вопрос 3: ");
-        int answer3 = s.nextInt();
-        if ((answer3 == 1) || (answer3 == 2) || (answer3 == 3) || (answer3 == 4)) {
-            arrAnswers[2] = answer3;
-        }
-
         System.out.println("Номера ответов: ");
         for (int i = 0; i < arrAnswers.length; i++) {
             System.out.print(arrAnswers[i] + " ");
         }
+
 
         //сравнение ответов
         int correctAnswersCount = 0;
