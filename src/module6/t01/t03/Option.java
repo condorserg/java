@@ -5,6 +5,12 @@ public class Option {
     String text;
     boolean correct;
 
+    public Option(long id, String text, boolean correct) {
+        this.id = id;
+        this.text = text;
+        this.correct = correct;
+    }
+
     public long getId() {
         return id;
     }

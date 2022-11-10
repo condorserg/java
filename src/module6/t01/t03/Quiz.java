@@ -5,6 +5,12 @@ public class Quiz {
     String name;
     Question[] questionList;
 
+    public Quiz(int id, String name, Question[] questionList) {
+        this.id = id;
+        this.name = name;
+        this.questionList = questionList;
+    }
+
     public int getId() {
         return id;
     }
