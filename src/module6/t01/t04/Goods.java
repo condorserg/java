@@ -3,15 +3,15 @@ package module6.t01.t04;
 import java.util.Date;
 
 public class Goods {
-    String id;
+    int id;
     String Title;
     int weight;
     int price;
     int amount;
-    Date manufactureDate;
-    Date bestBefore;
+    String manufactureDate;
+    String bestBefore;
 
-    public Goods(String id, String title, int weight, int price, int amount, Date manufactureDate, Date bestBefore) {
+    public Goods(int id, String title, int weight, int price, int amount, String manufactureDate, String bestBefore) {
         this.id = id;
         Title = title;
         this.weight = weight;
